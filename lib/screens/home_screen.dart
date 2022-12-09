@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, library_private_types_in_public_api
 
-import 'package:app_def/%C3%A9crans/signin_screen.dart';
+import 'package:app_def/screens/signin_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
