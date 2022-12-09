@@ -1,5 +1,6 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, unnecessary_import, implementation_imports, unused_import, prefer_final_fields
 
+import 'package:app_def/%C3%A9crans/home_screen.dart';
 import 'package:app_def/%C3%A9crans/signup_screen.dart';
 import 'package:app_def/reusable_widgets/reusable_widget.dart';
 import 'package:app_def/utils/colors_utils.dart';
@@ -52,8 +53,11 @@ class _SignInScreenState extends State<SignInScreen> {
                 SizedBox(
                   height: 20,
                 ),
-                SignInSignUpButton(context, true, () {}),
-                SignUpOption()                
+                SignInSignUpButton(context, true, () {
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=>HomeScreen()));
+              }),
+                signUpOption()                
               ],
             ),
           ),
@@ -62,7 +66,7 @@ class _SignInScreenState extends State<SignInScreen> {
     );
   }
 
-  Row SignUpOption() {
+  Row signUpOption() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
